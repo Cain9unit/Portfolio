@@ -100,6 +100,77 @@ navbar .right a span{
     border-radius: 50%;
     width: 400px;
 }
+/* section 2:motivation */
+
+.motivation {
+    display: flex;
+    flex-direction: column;
+    padding: 0 50px;
+    margin-bottom: 75px;
+}
+
+.motivation h2 {
+    text-align: center;
+    font-size: 35px;
+    margin-bottom : 30px;
+}
+.motivation .text {
+    padding: 48px;
+    display: flex;
+    flex: 1;
+    flex-wrap: wrap;
+    gap: 32px;
+    justify-content: space-around;
+
+}
+
+.card {
+  
+    position: relative;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    border-radius: 8px;
+    padding: 90px 28px 28px; 
+    max-width: 900px;
+    margin: 110px 20px 20px;
+    text-align: left;
+    background-color: #ffffff;
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+
+}
+
+.card p {
+    font-size: 20px;
+    line-height: 1.9;
+    color: var(--text-color);
+    padding-top: 25px; 
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+.image-container {
+    position: absolute;
+    top: -85px;
+    left: 50%;
+    transform: translateX(-50%); 
+    
+}
+
+.card-image {
+    width: 180px; 
+    height: 180px;
+    object-fit: cover;
+    border-radius: 50%; 
+    border: 3px solid #ffffff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+   
+}
+
+
+
+
 
 /*next section is to make the site responsive*/
 
@@ -141,4 +212,11 @@ navbar .right a span{
     }
     .hero-section .herotext h2 {
         font-size: 30px;
-};
+    }
+    @media (max-width: 800px) {
+        .card {
+            width: 100%;
+            margin: 10px 0;
+        }
+    }
+}
