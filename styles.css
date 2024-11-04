@@ -90,6 +90,8 @@ navbar .right a span{
 .hero-section .herotext .links a:hover {
     color:var(--text-color);
     border: 2px solid var(--text-color);
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
 }
 .hero-section .headshot{
     flex: 2;
@@ -111,8 +113,8 @@ navbar .right a span{
 
 .motivation h2 {
     text-align: center;
-    font-size: 35px;
-    margin-bottom : 30px;
+    font-size: 40px;
+    margin-bottom : 10px;
 }
 .motivation .text {
     padding: 48px;
@@ -168,6 +170,49 @@ navbar .right a span{
    
 }
 
+/*Section 3: Skills*/
+
+.skills-section {
+    padding: 0 50px;
+    margin-bottom: 100px;
+}
+
+.skills-section h2 {
+    text-align: center;
+    font-size: 40px;
+}
+.skills-section .text {
+    margin-bottom: 20px;
+}
+
+.skills-section .cells {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.skills-section .cells .cell {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 200px;
+    padding: 10px 20px;
+    border: 1.5px solid #d3d3d3;
+    border-radius: 5px;
+    margin: 10px;
+    gap: 10px;
+}
+.skills-section .cells .cell img {
+    width: 30px;
+    height: 30px;
+    object-fit: contain;
+    border-radius: 2px;
+}
+
+.skills-section .cells .cell span {
+    font-size: 20px;
+}
+
 
 
 
@@ -213,10 +258,18 @@ navbar .right a span{
     .hero-section .herotext h2 {
         font-size: 30px;
     }
-    @media (max-width: 800px) {
-        .card {
-            width: 100%;
-            margin: 10px 0;
-        }
+    /*section 3: skills*/
+    .skills-section {
+        padding: 0 20px;
+    }
+    .skills-section .cells .cell span {
+        font-size: 15px;
+    }
+   
+}
+@media (max-width: 800px) {
+    .card {
+        width: 100%;
+        margin: 10px 0;
     }
 }
