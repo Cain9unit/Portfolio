@@ -28,35 +28,35 @@ a {
 }
 
 /*navbar*/
-navbar {
+nav {
     display: flex;
     justify-content: space-between;
     padding: 0 50px;
     height: 80px;
     align-items: center;
 }
-navbar .left a {
+nav .left a {
     text-decoration: none;
     color: var(--text-color);
     font-size: 22px;
     font-weight: 600;
 }
 
-navbar .right a { 
+nav .right a { 
     color: var(--text-color);
     font-size: 22px;
     margin: 0 10px;
     
 }
 
-navbar .right a:last-child {
+nav .right a:last-child {
     color: var(--background-color);
     background-color: var(--text-color);
     padding: 5px 15px;
     border-radius: 6px;
 }
 
-navbar .right a span{
+nav .right a span{
     margin-left: 5px;
 }
 
@@ -125,7 +125,9 @@ navbar .right a span{
     flex-wrap: wrap;
     gap: 32px;
     justify-content: space-around;
-
+}
+.motivation .text span {
+    font-weight: 550;
 }
 
 .card {
@@ -182,7 +184,7 @@ navbar .right a span{
 .skills-section h2 {
     text-align: center;
     font-size: 40px;
-    margin-bottom: 35px;
+    margin-bottom: 70px;
 }
 .skills-section .text {
     margin-bottom: 20px;
@@ -269,12 +271,16 @@ navbar .right a span{
 /*section 4 hobbies*/
 
 .hobby-section {
-  display: flex;
-  gap: 50px;
-  align-items: center;
-  justify-content: center;
-  margin: 10px 0 80px 0;
-  flex-wrap: wrap; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 100px;
+    margin-top: 80px;
+    padding: 20px;
+}
+
+.hobbies {
+    padding: 20px;
 }
 
 .hobbies h2 {
@@ -282,19 +288,44 @@ navbar .right a span{
     font-size: 40px;
     margin-bottom: 40px;
 }
-.hobby-section .text {
-    text-align: center;
+.hobby-card {
+  background-color: #f8f9fa; 
+  border-radius: 8px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  padding: 20px;
+  width: 550px; 
+  height: 563px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+.hobby-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
 }
 
 .hobby-section .video {
     width: 1000px;
     height: 563px;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
 }
+
+.video iframe {
+    width: 100%;
+    height: 100%;
+  }
 
 /*section 5 contact*/
 .contact-section { 
     padding: 0 50px;
-    margin-bottom: 100px;
+    margin-top: 300px;
+    margin-bottom: 60px;
 }
 
 .contact-section h2 {
@@ -317,6 +348,26 @@ navbar .right a span{
     flex: 3;
 }
 
+.footer {
+position: fixed;
+bottom: 0;
+left: 0;
+right: 0;
+height: 42px;
+display: flex;
+align-items: center; 
+justify-content: center;
+color: #d3d3d3; 
+font-size: 13px;
+opacity: 0.8; 
+padding: 0 10px; 
+z-index: 10; 
+}
+
+.footer a {
+    margin-right: 20px;
+}
+
 .contact-section .group form input,
 .contact-section .group form textarea {
     font-family: 'Poppins', sans-serif;
@@ -336,7 +387,6 @@ navbar .right a span{
     background-color: var(--link-color);
     border: none;
     height: 50px;
-    cursor: pointer;
     transition: .1s;
 }
 
@@ -393,6 +443,10 @@ navbar .right a span{
     .skills-section .cells .cell span {
         font-size: 15px;
     }
+    /* section4: contact */
+  .contact-section {
+    padding: 0 20px;
+  }
    
 }
 @media (max-width: 800px) {
@@ -400,6 +454,9 @@ navbar .right a span{
         width: 100%;
         margin: 10px 0;
     }
+    .contact-section .group {
+        flex-direction: column;
+      }
 }
 
 /*section 4*/
@@ -407,7 +464,8 @@ navbar .right a span{
 @media (max-width: 1020px) {
     .hobby-section {
       flex-direction: column; 
-      align-items: stretch;    
+      align-items: stretch;
+      justify-content: center;    
     }
     video {
         width: 100%;             
