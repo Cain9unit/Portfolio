@@ -2,7 +2,7 @@
 --text-color: #1a1c20;
 --link-color: #4a76ee;
 --background-color: #eeeff1;
-font-size: 24px;
+font-size: 16px;
 }
 
 *{
@@ -20,6 +20,7 @@ body {
     background-color: var(--background-color);
     max-width: 2200px;
     margin: 0 auto;
+    padding: 0 20px;
 }
 
 a {
@@ -69,13 +70,20 @@ nav .right a span{
     align-items: center;
     margin-bottom: 100px;
     gap: 40px;
+    flex-wrap: wrap;
 }
 
 .hero-section .herotext{
     flex:5;
+    font-size: 1.4rem;
 }
+
 .hero-section .herotext h2{
-    font-size: 45px;
+    font-size: 2.8rem;
+}
+
+.hero-section .herotext p {
+    line-height: 1.5;
 }
 .hero-section .herotext .links {
     margin-top: 25px;
@@ -102,7 +110,9 @@ nav .right a span{
 }
 .hero-section .headshot img {
     border-radius: 50%;
-    width: 400px;
+    width: 100%;
+    max-width: 400px;
+    height: auto;
 }
 /* section 2:motivation */
 
@@ -115,7 +125,7 @@ nav .right a span{
 
 .motivation h2 {
     text-align: center;
-    font-size: 40px;
+    font-size: 2.5rem;
     margin-bottom : 10px;
 }
 .motivation .text {
@@ -146,7 +156,7 @@ nav .right a span{
 }
 
 .card p {
-    font-size: 20px;
+    font-size: 1.25rem;
     line-height: 1.9;
     color: var(--text-color);
     padding-top: 25px; 
@@ -174,7 +184,7 @@ nav .right a span{
    
 }
 
-/*Section 3: Skills*/
+/*Section 3: Skills and interests*/
 
 .skills-section {
     padding: 0 50px;
@@ -183,12 +193,13 @@ nav .right a span{
 
 .skills-section h2 {
     text-align: center;
-    font-size: 40px;
+    font-size: 2.5rem;
     margin-bottom: 70px;
 }
 .skills-section .text {
     margin-bottom: 20px;
     text-align: center;
+    font-size: 1.4rem;
 }
 
 .skills-section .cells {
@@ -224,13 +235,13 @@ nav .right a span{
   }
 
 .skills-section .cells .cell span {
-    font-size: 20px;
+    font-size: 1.25rem;
 }
 
 .skills-section .cells .cell button {
     display: flex;
     align-items: center;
-    font-size: 20px;
+    font-size: 1.25rem;
     padding: 10px 15px;
     background-color: #f0f0f0;
     border: none;
@@ -249,7 +260,7 @@ nav .right a span{
     padding: 12px;
     margin-top: 10px;
     border-radius: 5px;
-    font-size: 16px;
+    font-size: 1rem;
     text-align: center;
     width: 100%; 
     transition: opacity 0.3s ease;
@@ -274,9 +285,10 @@ nav .right a span{
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 100px;
+    gap: 50px;
     margin-top: 80px;
     padding: 20px;
+    flex-wrap: wrap;
 }
 
 .hobbies {
@@ -285,7 +297,7 @@ nav .right a span{
 
 .hobbies h2 {
     text-align: center;
-    font-size: 40px;
+    font-size: 2.5rem;
     margin-bottom: 40px;
 }
 .hobby-card {
@@ -301,6 +313,10 @@ nav .right a span{
   align-items: center;
   text-align: center;
   transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+.hobby-card p {
+    font-size: 1.4rem;
 }
 
 .hobby-card:hover {
@@ -335,6 +351,7 @@ nav .right a span{
 .contact-section .group {
     display: flex;
     gap: 50px;
+    font-size:  1.4rem;
 }
 
 .contact-section .group .text {
@@ -348,25 +365,38 @@ nav .right a span{
     flex: 3;
 }
 
+
+
 .footer {
-position: fixed;
-bottom: 0;
-left: 0;
-right: 0;
-height: 42px;
-display: flex;
-align-items: center; 
-justify-content: center;
-color: #d3d3d3; 
-font-size: 13px;
-opacity: 0.8; 
-padding: 0 10px; 
-z-index: 10; 
+    box-sizing: border-box;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 20px; 
+    min-height: 20px; 
+    overflow: hidden;
+    background-color: var(--background-color);
+    font-size: 0.9rem;
+    opacity: 0.3; 
+    padding: 0 20px;
+    z-index: 10;
+    transition: height 0.3s ease, opacity 0.3s ease; 
 }
 
-.footer a {
-    margin-right: 20px;
+.footer-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
 }
+
+.footer:hover {
+    height: 50px;
+    padding: 20px; 
+    opacity: 1; 
+}
+
 
 .contact-section .group form input,
 .contact-section .group form textarea {
@@ -398,7 +428,7 @@ z-index: 10;
 @media (max-width: 850px) {
     /*section 1: hero*/
     .hero-section {
-    font-size: 35px;
+    font-size: 1.5rem;
     }
 }
 
@@ -407,7 +437,7 @@ z-index: 10;
         flex-direction: column-reverse;
     }
     .hero-section .headshot img {
-        width: 350px;
+        width: 80%;
 
     }
 }
@@ -415,16 +445,16 @@ z-index: 10;
 
 @media (max-width: 650px){
     /*navbar*/
-    navbar {
+    nav {
         padding: 0 20px;
     }
-    navbar .right a span {
+    nav .right a span {
         display: none;
     }
-    navbar .right a {
+    nav .right a {
         font-size: 22px;
     }
-    navbar .right a:last-child {
+    nav .right a:last-child {
         color: var(--text-color);
         background-color: transparent;
         padding: 0
