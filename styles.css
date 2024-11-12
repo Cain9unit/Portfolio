@@ -540,12 +540,12 @@ nav .right a span{
 @media (max-width: 400px) {
     /* Very narrow phones */
     body {
-        padding: 0 10px; /* Reduce padding */
+        padding: 0 10px; 
     }
 
     nav {
         flex-direction: column;
-        align-items: center; /* Center the nav items */
+        align-items: center; 
         padding: 0;
     }
 
@@ -566,7 +566,7 @@ nav .right a span{
         padding: 0;
         gap: 10px;
         align-items: center;
-        text-align: center; /* Center text for narrow view */
+        text-align: center; 
     }
 
     .hero-section .herotext {
@@ -589,14 +589,14 @@ nav .right a span{
 
     .hero-section .headshot img {
         width: 100%;
-        max-width: 250px; /* Smaller image for narrow screens */
+        max-width: 250px; 
     }
 
-    /* Center motivation and skills sections */
+    
     .motivation,
     .skills-section {
         padding: 0;
-        text-align: center; /* Center text for narrow screens */
+        text-align: center; 
     }
 
     .motivation h2,
