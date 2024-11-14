@@ -425,104 +425,61 @@ nav .right a span{
 }
 /*next section is to make the site responsive*/
 
-@media (max-width: 850px) {
-    /*section 1: hero*/
-    .hero-section {
-    font-size: 1.5rem;
-    }
-}
-
-@media (max-width: 950px) {
-    .hero-section {
-        flex-direction: column-reverse;
-    }
-    .hero-section .headshot img {
-        width: 80%;
-
-    }
-}
-
-
-@media (max-width: 650px){
-    /*navbar*/
-    nav {
-        padding: 0 20px;
-    }
-    nav .right a span {
-        display: none;
-    }
-    nav .right a {
-        font-size: 22px;
-    }
-    nav .right a:last-child {
-        color: var(--text-color);
-        background-color: transparent;
-        padding: 0
-    }
-    /*Section 1: hero*/
-    .hero-section {
-        padding: 0 20px;
-    }
-    .hero-section .herotext h2 {
-        font-size: 30px;
-    }
-    /*section 3: skills*/
-    .skills-section {
-        padding: 0 20px;
-    }
-    .skills-section .cells .cell span {
-        font-size: 15px;
-    }
-    /* section4: contact */
-  .contact-section {
-    padding: 0 20px;
-  }
-   
-}
-@media (max-width: 800px) {
-    .card {
-        width: 100%;
-        margin: 10px 0;
-    }
-    .contact-section .group {
-        flex-direction: column;
-      }
-}
-
-/*section 4*/
-
-@media (max-width: 1020px) {
-    .hobby-section {
-      flex-direction: column; 
-      align-items: stretch;
-      justify-content: center;    
-    }
-    video {
-        width: 100%;             
-        height: auto;           
-      }
-}
-
-@media (max-width: 768px) {
+/*This is for medium laptops (992px to 1199px) */
+@media (max-width: 1199px) {
     .hero-section,
     .motivation,
-    .skills-section {
-        padding: 0 20px;
+    .skills-section,
+    .contact-section {
+        padding: 0 50px;
     }
 
+    .hero-section .herotext h2 {
+        font-size: 2.5rem;
+    }
+
+    .hobby-section .video,
+    .hobby-card {
+        width: 700px;
+    }
+}
+
+/* This is for smaller laptops or tablets (768px to 991px) */
+@media (max-width: 991px) {
+    /* Adjust container padding */
+    .hero-section,
+    .motivation,
+    .skills-section,
+    .contact-section {
+        padding: 0 30px;
+    }
+
+    /* Hero Section */
     .hero-section {
         flex-direction: column-reverse;
-        font-size: 1.3rem;
-        gap: 20px;
+        gap: 30px;
     }
 
     .hero-section .herotext h2 {
         font-size: 2.2rem;
     }
 
+    .hero-section .herotext {
+        font-size: 1.2rem;
+    }
+
     .hero-section .headshot img {
         width: 80%;
-        max-width: 300px;
+        max-width: 350px;
+    }
+
+    /* Navbar */
+    nav {
+        padding: 0 30px;
+    }
+
+    nav .left a {
+        font-size: 20px;
     }
 
     nav .right a {
@@ -530,20 +487,198 @@ nav .right a span{
         margin: 0 5px;
     }
 
-    .motivation .text,
-    .skills-section .cells {
+    /* motivation Cards */
+    .card {
+        max-width: 100%;
+        margin: 50px 0;
+    }
+
+    /* hobby Section */
+    .hobby-section {
         flex-direction: column;
+    }
+
+    .hobby-section .video,
+    .hobby-card {
+        width: 600px;
+    }
+
+    /* contact Section */
+    .contact-section .group {
+        flex-direction: column;
+    }
+
+    .contact-section .group .text,
+    .contact-section .group form {
+        flex: none;
+        width: 100%;
+    }
+}
+
+/* This is for tablets and smaller laptops (576px to 767px) */
+@media (max-width: 767px) {
+    /* General Container Padding */
+    .hero-section,
+    .motivation,
+    .skills-section,
+    .contact-section {
+        padding: 0 20px;
+    }
+
+    /* Hero Section */
+    .hero-section .herotext h2 {
+        font-size: 2rem;
+    }
+
+    .hero-section .herotext {
+        font-size: 1rem;
+    }
+
+    /* Skills Section */
+    .skills-section .text {
+        font-size: 1.2rem;
+    }
+
+    .skills-section .cells .cell {
+        width: 180px;
+        margin: 8px;
+    }
+
+    .skills-section .cells .cell span {
+        font-size: 1rem;
+    }
+
+    /* Hobby Section */
+    .hobby-section .video,
+    .hobby-card {
+        width: 100%;
+        max-width: 500px;
+    }
+}
+
+/*  This will be used for phones (up to 575px) */
+@media (max-width: 575px) {
+    /* Hero Section */
+    .hero-section {
+        padding: 0 10px;
         align-items: center;
+        text-align: center;
+    }
+
+    .hero-section .herotext h2 {
+        font-size: 1.8rem;
+    }
+
+    .hero-section .herotext {
+        font-size: 0.9rem;
+    }
+
+    .hero-section .headshot img {
+        width: 100%;
+        max-width: 250px;
+    }
+
+    /* Navbar */
+    nav {
+        padding: 0 10px;
+        flex-direction: column;
+        height: auto;
+    }
+
+    nav .left,
+    nav .right {
+        width: 100%;
+        text-align: center;
+        margin: 5px 0;
+    }
+
+    nav .right a {
+        font-size: 18px;
+        margin: 5px;
+    }
+
+    /* Motivation Cards */
+    .motivation .text {
+        padding: 20px 0;
+    }
+
+    .card {
+        padding: 70px 20px 20px;
+        margin: 50px 0;
+    }
+
+    .card p {
+        font-size: 1rem;
+    }
+
+    .image-container {
+        top: -65px;
+    }
+
+    .card-image {
+        width: 130px;
+        height: 130px;
+    }
+
+    /* Skills Section */
+    .skills-section h2 {
+        font-size: 2rem;
+    }
+
+    .skills-section .cells .cell {
+        width: 100%;
+        margin: 10px 0;
+    }
+
+    /* Hobby Section */
+    .hobby-section .video,
+    .hobby-card {
+        width: 100%;
+        max-width: 350px;
+    }
+
+    .hobby-card p {
+        font-size: 1.1rem;
+    }
+
+    /* Contact Section */
+    .contact-section {
+        padding: 0 10px;
+    }
+
+    .contact-section h2 {
+        font-size: 2rem;
+    }
+
+    .contact-section .group {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .contact-section .group .text,
+    .contact-section .group form {
+        width: 100%;
+    }
+
+    /* Footer */
+    .footer {
+        font-size: 0.7rem;
+    }
+
+    .footer-content {
+        flex-direction: column;
+        gap: 10px;
     }
 }
 
 @media (max-width: 400px) {
-    /* Very narrow phones */
+    /* This is for narrow phones */
     body {
         padding: 0 10px; 
     }
 
     nav {
+        display: flex;
         flex-direction: column;
         align-items: center; 
         padding: 0;
@@ -560,8 +695,7 @@ nav .right a span{
         gap: 8px;
         font-size: 16px;
     }
-
-    /* Center the hero section and align text */
+    
     .hero-section {
         padding: 0;
         gap: 10px;
@@ -610,6 +744,32 @@ nav .right a span{
         padding: 8px 10px;
     }
 
+    .hobby-section {
+       
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 0;
+        margin: 20px auto; 
+        width: 100%; 
+    
+    }
+
+    .hobby-card {
+        width: 95%; 
+        max-width: 350px; 
+        padding: 15px;
+        box-sizing: border-box; 
+        margin-bottom: 20px; 
+    }
+
+    .video {
+        width: 95%; 
+        max-width: 350px;
+        height: auto; 
+        margin: 0 auto; 
+    }
+
     /* Footer */
     .footer {
         height: 15px;
@@ -624,7 +784,8 @@ nav .right a span{
 
     .footer-content {
         flex-direction: column;
-        align-items: center; /* Center footer content */
+        align-items: center; 
         gap: 5px;
     }
 }
+
